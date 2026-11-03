@@ -19,7 +19,7 @@ export interface Vehicle {
 
 export type PaymentMode = 'CONTADO' | 'FINANCIADO';
 export type LeonStrategy = 'VENTA_PRIVADA_Y_CAE' | 'DESGUACE_Y_CAE' | 'SIN_CAE';
-export type BuyerProfile = 'YO_2026_18K' | 'YO_2027_33K' | 'PADRE_38K' | 'CUSTOM';
+export type BuyerProfile = 'YO_2026_18K' | 'YO_2027_33K' | 'PADRE_34K' | 'CUSTOM';
 export type IrpfCapRule = 'ESTRICTO_ESTATAL' | 'CUOTA_TOTAL';
 
 export interface FiscalResult {

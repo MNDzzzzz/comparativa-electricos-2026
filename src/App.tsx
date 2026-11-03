@@ -98,7 +98,7 @@ export default function App() {
     setBuyerProfile(profile);
     if (profile === 'YO_2026_18K') setSueldoBruto(18000);
     if (profile === 'YO_2027_33K') setSueldoBruto(33000);
-    if (profile === 'PADRE_38K') setSueldoBruto(38000);
+    if (profile === 'PADRE_34K') setSueldoBruto(34000);
   };
 
   const handleSalaryChange = (val: number | string) => {
@@ -277,14 +277,14 @@ export default function App() {
     };
   }, [currentCalc]);
 
-  const comparison38k = useMemo(() => {
-    const f38 = calcularFiscalidadCompleta(38000, currentCalc.subvencionAutoPlusBruta);
-    const dedReal38 = Math.min(currentCalc.deduccionTeoricaTotal, f38.cuotaEstatalSinAyuda);
+  const comparison34k = useMemo(() => {
+    const f34 = calcularFiscalidadCompleta(34000, currentCalc.subvencionAutoPlusBruta);
+    const dedReal34 = Math.min(currentCalc.deduccionTeoricaTotal, f34.cuotaEstatalSinAyuda);
     return {
-      cuotaEstatal: f38.cuotaEstatalSinAyuda,
-      dedReal: dedReal38,
-      impuestoAyudaCat: f38.impuestoSubvencionCat,
-      impuestoAyudaAra: f38.impuestoSubvencionAra
+      cuotaEstatal: f34.cuotaEstatalSinAyuda,
+      dedReal: dedReal34,
+      impuestoAyudaCat: f34.impuestoSubvencionCat,
+      impuestoAyudaAra: f34.impuestoSubvencionAra
     };
   }, [currentCalc]);
 
@@ -850,21 +850,21 @@ export default function App() {
                 </button>
 
                 <button
-                  onClick={() => handleSelectProfile('PADRE_38K')}
+                  onClick={() => handleSelectProfile('PADRE_34K')}
                   className={`w-full text-left p-3 rounded-xl border transition-all flex items-center justify-between ${
-                    buyerProfile === 'PADRE_38K'
+                    buyerProfile === 'PADRE_34K'
                       ? 'bg-indigo-500/20 border-indigo-400 text-white shadow-lg shadow-indigo-500/10'
                       : 'bg-slate-950 border-slate-800 text-slate-300 hover:border-slate-700'
                   }`}
                 >
                   <div>
-                    <div className="text-xs font-bold">Sueldo Consolidado / Familiar (≥38.000 €)</div>
+                    <div className="text-xs font-bold">Sueldo Consolidado / Familiar (≥34.000 €)</div>
                     <div className="text-[11px] text-slate-400">
                       Recupera el 100% de los 3.000 € de IRPF al milímetro
                     </div>
                   </div>
                   <span className="text-xs font-extrabold px-2 py-1 rounded bg-indigo-500/30 text-indigo-200">
-                    38.000 €
+                    34.000 €
                   </span>
                 </button>
               </div>
@@ -909,16 +909,32 @@ export default function App() {
 
             {/* Desglose de absorción fiscal */}
             <div className="mt-4 pt-3 border-t border-slate-800 space-y-2.5">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400">Criterio límite de deducción:</span>
-                <select
-                  value={irpfCapRule}
-                  onChange={(e) => setIrpfCapRule(e.target.value as IrpfCapRule)}
-                  className="bg-slate-950 border border-slate-700 rounded-lg px-2 py-1 text-xs text-slate-200"
-                >
-                  <option value="ESTRICTO_ESTATAL">Criterio Estricto (Solo Cuota Estatal)</option>
-                  <option value="CUOTA_TOTAL">Cuota Total (Estatal + Autonómica)</option>
-                </select>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                <span className="text-slate-400 font-medium">Criterio límite deducción:</span>
+                <div className="grid grid-cols-2 bg-slate-950 p-1 rounded-lg border border-slate-800 gap-1">
+                  <button
+                    type="button"
+                    onClick={() => setIrpfCapRule('ESTRICTO_ESTATAL')}
+                    className={`px-2 py-1 rounded-md text-[11px] font-semibold transition text-center ${
+                      irpfCapRule === 'ESTRICTO_ESTATAL'
+                        ? 'bg-amber-500 text-slate-950 shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Solo Cuota Estatal
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIrpfCapRule('CUOTA_TOTAL')}
+                    className={`px-2 py-1 rounded-md text-[11px] font-semibold transition text-center ${
+                      irpfCapRule === 'CUOTA_TOTAL'
+                        ? 'bg-amber-500 text-slate-950 shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Cuota Total (Estatal+Auto)
+                  </button>
+                </div>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5 text-xs">
@@ -962,10 +978,10 @@ export default function App() {
 
               <div className="p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/30 text-xs text-cyan-100 space-y-1">
                 <div className="font-bold text-cyan-300 flex items-center gap-1.5">
-                  <Info className="w-4 h-4 shrink-0" /> ¡El Plan Auto+ NO exige desguace!
+                  <Info className="w-4 h-4 shrink-0" /> Bonificación CAE (950 €)
                 </div>
                 <p className="text-cyan-200/90 leading-relaxed">
-                  El Certificado de Ahorro Energético (CAE de 950 €) permite sustituir un coche antiguo de combustión y además venderlo a otro particular para sumar liquidez.
+                  El Certificado CAE aporta 950 € de descuento directo en factura al sustituir tu vehículo antiguo de combustión.
                 </p>
               </div>
 
@@ -981,13 +997,13 @@ export default function App() {
                   },
                   {
                     id: 'DESGUACE_Y_CAE',
-                    title: 'Entregar al Desguace + CAE',
-                    desc: 'Cobras 950 € CAE pero no ingresas venta privada'
+                    title: 'Entregar al desguace o no vender',
+                    desc: 'Cobras 950 € CAE en factura (sin ingreso por venta privada)'
                   },
                   {
                     id: 'SIN_CAE',
                     title: 'Sin Coche Antiguo / Sin CAE',
-                    desc: 'Sin descuento de 950 € CAE ni ingresos adicionales'
+                    desc: 'Sin descuento de 950 € CAE ni vehículo a sustituir'
                   }
                 ].map((opt) => (
                   <button
@@ -1068,7 +1084,7 @@ export default function App() {
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
                 Con un sueldo bruto de <strong>{formatEur(sueldoBruto)}/año</strong>, tu cuota estatal en el IRPF te permite recuperar{' '}
-                <strong>{formatEurExact(currentCalc.deduccionRealCat)}</strong> de la deducción del 15%. Si figuras tú o un familiar con mayores ingresos (ej. ≥38.000 €), se aprovecha el 100% de los 3.000 € de rebaja fiscal.
+                <strong>{formatEurExact(currentCalc.deduccionRealCat)}</strong> de la deducción del 15%. Si figuras tú o un familiar con ingresos desde 34.000 €/año, se aprovecha el 100% de los 3.000 € de rebaja fiscal.
               </p>
             </div>
 
@@ -1095,9 +1111,9 @@ export default function App() {
               </div>
 
               <div className="bg-slate-950/90 border border-indigo-400/40 rounded-xl p-3 text-center">
-                <div className="text-[11px] text-slate-400">Sueldo ≥ 38.000 €/año</div>
+                <div className="text-[11px] text-slate-400">Sueldo ≥ 34.000 €/año</div>
                 <div className="text-sm font-extrabold text-indigo-300 mt-0.5">
-                  Cobras {formatEur(comparison38k.dedReal)} IRPF
+                  Cobras {formatEur(comparison34k.dedReal)} IRPF
                 </div>
                 <div className="text-[10px] text-slate-500">
                   100% Aprovechado
