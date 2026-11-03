@@ -1,0 +1,213 @@
+{
+  "timestamp": "2026-11-03T14:30:31.646Z",
+  "total": 34,
+  "passed": 34,
+  "failed": 0,
+  "successRate": "100.0%",
+  "results": [
+    {
+      "testName": "iPhone 14 - Header Móvil Compacto (<= 58px)",
+      "passed": true,
+      "details": "Altura real medida: 56.0px (máximo permitido: 58px)",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Mini-KPI Bar en Header",
+      "passed": true,
+      "details": "Texto detectado en Mini-KPI: \"NETO MÍN. 15.058 €\"",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Botón Compartir Accesible (>= 44x44px)",
+      "passed": true,
+      "details": "Dimensiones táctiles del botón: 44x44px",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Header y Tab Coche",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "01_iphone14_header_kpi_tab1_coche.png"
+    },
+    {
+      "testName": "iPhone 14 - Transición Pestaña 2 (IRPF)",
+      "passed": true,
+      "details": "Sección de Sueldo Bruto y Deducción IRPF desplegada correctamente",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Pestaña IRPF",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "02_iphone14_tab2_irpf_sueldo.png"
+    },
+    {
+      "testName": "iPhone 14 - Transición Pestaña 3 (CAE)",
+      "passed": true,
+      "details": "Sección de Bonificación CAE y Vehículo Antiguo desplegada",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Pestaña CAE",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "03_iphone14_tab3_cae_wallbox.png"
+    },
+    {
+      "testName": "iPhone 14 - Desglose Cara a Cara Activo por Defecto",
+      "passed": true,
+      "details": "El modo de tarjetas \"Cara a Cara\" está seleccionado automáticamente en móvil",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Ausencia de Scroll Horizontal Forzado",
+      "passed": true,
+      "details": "ScrollWidth: 390px vs Viewport: 390px",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Desglose Cara a Cara",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "04_iphone14_desglose_cara_a_cara.png"
+    },
+    {
+      "testName": "iPhone 14 - Catálogo Vista Tarjetas por Defecto",
+      "passed": true,
+      "details": "El catálogo presenta la vista tarjetas optimizada para dedos",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Total Tarjetas Iniciales (53 Modelos)",
+      "passed": true,
+      "details": "Se encontraron exactamente 53 tarjetas de modelos en catálogo",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Catálogo Tarjetas",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "05_iphone14_catalogo_cards_default.png"
+    },
+    {
+      "testName": "iPhone 14 - Despliegue Panel de Filtros Colapsable",
+      "passed": true,
+      "details": "El panel de filtros avanzados se desplegó tras hacer tap",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Filtros Avanzados",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "06_iphone14_filtros_avanzados_desplegados.png"
+    },
+    {
+      "testName": "iPhone 14 - Filtrado por Marca Tesla (12 modelos)",
+      "passed": true,
+      "details": "Se muestran 12 tarjetas tras filtrar por Tesla",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Filtro Tesla",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "07_iphone14_filtro_tesla_aplicado.png"
+    },
+    {
+      "testName": "iPhone 14 - Selección de Coche desde Tarjeta Móvil",
+      "passed": true,
+      "details": "La tarjeta cambió a estado seleccionado (\"Activo / Modelo Activo en Simulación\")",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Header Mini-KPI Sincronizado con Selección",
+      "passed": true,
+      "details": "Header móvil muestra el coche seleccionado: \"Tesla Model 3 Highland\"",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Selección Sincronizada",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "08_iphone14_coche_seleccionado_update.png"
+    },
+    {
+      "testName": "iPhone 14 - Alternancia a Vista Tabla",
+      "passed": true,
+      "details": "La tabla maestra se renderiza al pulsar el conmutador \"Tabla\"",
+      "screenshot": ""
+    },
+    {
+      "testName": "iPhone 14 - Captura Vista Tabla Móvil",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "09_iphone14_catalogo_tabla_view.png"
+    },
+    {
+      "testName": "Android 360px - Header Móvil Compacto (<= 58px)",
+      "passed": true,
+      "details": "Altura: 56.0px en viewport 360px",
+      "screenshot": ""
+    },
+    {
+      "testName": "Android 360px - Captura Inicial Overview",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "10_android360_header_cards_overview.png"
+    },
+    {
+      "testName": "Android 360px - Sin Desbordamiento Horizontal en 360px",
+      "passed": true,
+      "details": "ScrollWidth: 360px en viewport de 360px",
+      "screenshot": ""
+    },
+    {
+      "testName": "Android 360px - Captura Desglose Cara a Cara",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "11_android360_desglose_cara_a_cara.png"
+    },
+    {
+      "testName": "Android 360px - Filtrado por Marca Leapmotor (5 modelos)",
+      "passed": true,
+      "details": "Se visualizan correctamente 5 tarjetas de Leapmotor",
+      "screenshot": ""
+    },
+    {
+      "testName": "Android 360px - Captura Tarjetas Leapmotor",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "12_android360_filtro_activos_tarjeta.png"
+    },
+    {
+      "testName": "Tablet 768px - Header de Escritorio Completo Activo",
+      "passed": true,
+      "details": "En 768px se presenta la cabecera completa con título extendido y KPIs",
+      "screenshot": ""
+    },
+    {
+      "testName": "Tablet 768px - Configuración Multicolumna Visible",
+      "passed": true,
+      "details": "Estructura de configuración responsive adaptada para tablet",
+      "screenshot": ""
+    },
+    {
+      "testName": "Tablet 768px - Captura Overview iPad",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "13_tablet_ipad_overview.png"
+    },
+    {
+      "testName": "Desktop 1280px - Vista Tabla por Defecto en Pantalla Grande",
+      "passed": true,
+      "details": "El catálogo presenta la tabla comparativa completa por defecto en desktop",
+      "screenshot": ""
+    },
+    {
+      "testName": "Desktop 1280px - Captura Desktop Referencia",
+      "passed": true,
+      "details": "Captura guardada",
+      "screenshot": "14_desktop_referencia_overview.png"
+    }
+  ]
+}
